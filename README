@@ -1,0 +1,24 @@
+django-systemaccounting
+=======================
+
+Django-systemaccounting is the django application which collects, store and
+displays unix system accounting information provided by sa(1) utility. In
+short, you can log how much CPU time, IO operations each user used in requested
+period of time. The author is using this information for charging his hosting
+users.
+
+
+Collector
+---------
+
+Collector is the programm which is importing accounting data into the database.
+Collector runs as a separate system process. Basically this is a python wrapper
+for sa(1) unix utility. To work properly Collectors need access the account
+data file.
+
+Models
+---------
+
+Collected data should be stored in the database for quick and easy access.
+   Accounting:
+
